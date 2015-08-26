@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pre-DE-GlK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Meme Editor View Controller-->
@@ -15,13 +16,71 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdM-i6-MSu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYM-wJ-FCX">
+                                <rect key="frame" x="16" y="585" width="343" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nx8-VW-q4V">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jdM-i6-MSu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1Cn-Tq-Gwn"/>
+                            <constraint firstItem="nx8-VW-q4V" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9jv-kR-TqR"/>
+                            <constraint firstItem="jdM-i6-MSu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="AB6-Xi-GgV"/>
+                            <constraint firstItem="jdM-i6-MSu" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottomMargin" id="PBM-4H-bD1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jdM-i6-MSu" secondAttribute="trailing" constant="-16" id="QMg-3R-0Sf"/>
+                            <constraint firstAttribute="centerX" secondItem="nx8-VW-q4V" secondAttribute="centerX" id="VC8-hu-h0S"/>
+                            <constraint firstItem="nx8-VW-q4V" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="aUE-QH-6wW"/>
+                            <constraint firstItem="sYM-wJ-FCX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="aXi-bf-YYk"/>
+                            <constraint firstAttribute="centerX" secondItem="sYM-wJ-FCX" secondAttribute="centerX" id="ess-CL-7qk"/>
+                            <constraint firstItem="nx8-VW-q4V" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="fch-OR-2EX"/>
+                            <constraint firstItem="sYM-wJ-FCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="oUq-FS-lKs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sYM-wJ-FCX" secondAttribute="bottom" constant="8" id="xGn-fu-H1Z"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QrI-n5-1AS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1696.5" y="670.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yg0-oO-Kd7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="pre-DE-GlK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vI2-Gz-5rA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="E7U-WI-Pc2">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="VF7-pm-DGD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7M1-j7-JTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149.5" y="670.5"/>
         </scene>
     </scenes>
 </document>
