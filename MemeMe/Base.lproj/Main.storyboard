@@ -22,7 +22,7 @@
                                 <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYM-wJ-FCX">
-                                <rect key="frame" x="16" y="585" width="343" height="30"/>
+                                <rect key="frame" x="16" y="575" width="343" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -48,7 +48,7 @@
                             <constraint firstAttribute="centerX" secondItem="sYM-wJ-FCX" secondAttribute="centerX" id="ess-CL-7qk"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="fch-OR-2EX"/>
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="oUq-FS-lKs"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sYM-wJ-FCX" secondAttribute="bottom" constant="8" id="xGn-fu-H1Z"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sYM-wJ-FCX" secondAttribute="bottom" constant="18" id="xGn-fu-H1Z"/>
                         </constraints>
                     </view>
                     <toolbarItems>

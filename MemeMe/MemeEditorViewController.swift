@@ -13,7 +13,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -34,6 +33,16 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
             controller.sourceType = UIImagePickerControllerSourceType.Camera
         }
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            imageView.image = image
+            imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        }else{
+            print("Could not set image to view.")
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
