@@ -14,10 +14,15 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
     
     @IBAction func pickImage(sender: UIBarButtonItem){
@@ -28,7 +33,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         }else{
             controller.sourceType = UIImagePickerControllerSourceType.Camera
         }
-        self.presentViewController(controller, animated: true, completion: nil
+        self.presentViewController(controller, animated: true, completion: nil)
     }
 }
 

@@ -70,6 +70,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomTextField" destination="sYM-wJ-FCX" id="77R-fq-hgb"/>
+                        <outlet property="cameraButton" destination="59T-ua-MxI" id="JSK-kF-dIF"/>
                         <outlet property="imageView" destination="jdM-i6-MSu" id="HyZ-aw-u0w"/>
                         <outlet property="topTextField" destination="nx8-VW-q4V" id="L6Q-l5-1X8"/>
                     </connections>
