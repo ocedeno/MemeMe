@@ -51,8 +51,28 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sYM-wJ-FCX" secondAttribute="bottom" constant="8" id="xGn-fu-H1Z"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="RcV-Oy-ROR"/>
+                        <barButtonItem title="Album" id="DMs-cs-v0l">
+                            <connections>
+                                <action selector="pickImage:" destination="vXZ-lx-hvc" id="ef6-bu-7yG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="RaO-Kp-Ibg"/>
+                        <barButtonItem title="Camera" id="59T-ua-MxI">
+                            <connections>
+                                <action selector="pickImage:" destination="vXZ-lx-hvc" id="UG4-Fl-xBO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4oD-a3-gtS"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="QrI-n5-1AS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bottomTextField" destination="sYM-wJ-FCX" id="77R-fq-hgb"/>
+                        <outlet property="imageView" destination="jdM-i6-MSu" id="HyZ-aw-u0w"/>
+                        <outlet property="topTextField" destination="nx8-VW-q4V" id="L6Q-l5-1X8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
