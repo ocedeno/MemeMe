@@ -35,7 +35,6 @@
                             </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1Cn-Tq-Gwn"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9jv-kR-TqR"/>
@@ -52,19 +51,20 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="RcV-Oy-ROR"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vLP-Gm-j0d"/>
                         <barButtonItem title="Album" id="DMs-cs-v0l">
                             <connections>
                                 <action selector="pickImage:" destination="vXZ-lx-hvc" id="ef6-bu-7yG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="RaO-Kp-Ibg"/>
-                        <barButtonItem title="Camera" id="59T-ua-MxI">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xDf-d1-mJ4"/>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Tiv-s0-Nuc"/>
+                        <barButtonItem image="Camera" id="59T-ua-MxI">
                             <connections>
                                 <action selector="pickImage:" destination="vXZ-lx-hvc" id="UG4-Fl-xBO"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4oD-a3-gtS"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="kzT-Ty-bUx"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="QrI-n5-1AS">
                         <barButtonItem key="leftBarButtonItem" title="Share" id="OcJ-fK-Rfz"/>
@@ -106,4 +106,7 @@
             <point key="canvasLocation" x="1149.5" y="670.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="25" height="25"/>
+    </resources>
 </document>

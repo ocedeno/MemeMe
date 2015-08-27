@@ -15,13 +15,13 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
-    var memedImage: UIImage?
     var memeClass: MemeClass!
+    var memedImage: UIImage?
     
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName : UIColor.whiteColor(),
-        NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 30)!,
+        NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeWidthAttributeName : -3.0
     ]
     
@@ -39,15 +39,14 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         bottomTextField.text = "BOTTOM"
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
+        self.navigationItem.leftBarButtonItem?.enabled = false
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        self.navigationItem.leftBarButtonItem?.enabled = false
         subscribeToKeyboardNotifications()
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -55,15 +54,15 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         unsubscribeFromKeyboardNotification()
     }
+    
     @IBAction func pickImage(sender: UIBarButtonItem){
         let controller = UIImagePickerController()
         controller.delegate = self
-        
-        if sender.title == "Album" {
-            controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        }else{
-            controller.sourceType = UIImagePickerControllerSourceType.Camera
-        }
+            if sender.title == "Album" {
+                controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            }else{
+                controller.sourceType = UIImagePickerControllerSourceType.Camera
+            }
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
@@ -134,7 +133,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func save() {
         memedImage = generateMemedImage()
-        
         var meme = MemeClass(text1: topTextField.text, text2: bottomTextField.text, image: imageView.image!, memedImage: memedImage!)
     }
     
