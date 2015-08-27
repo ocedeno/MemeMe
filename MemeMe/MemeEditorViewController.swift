@@ -37,14 +37,17 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.textAlignment = .Center
         bottomTextField.text = "BOTTOM"
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        self.navigationItem.leftBarButtonItem?.enabled = false
         subscribeToKeyboardNotifications()
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -72,7 +75,9 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         }else{
             print("Could not set image to view.")
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            self.navigationItem.leftBarButtonItem?.enabled = true
+        })
     }
     
     func subscribeToKeyboardNotifications(){
