@@ -66,7 +66,13 @@
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4oD-a3-gtS"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="QrI-n5-1AS"/>
+                    <navigationItem key="navigationItem" id="QrI-n5-1AS">
+                        <barButtonItem key="leftBarButtonItem" title="Share" id="OcJ-fK-Rfz">
+                            <connections>
+                                <action selector="shareMeme:" destination="vXZ-lx-hvc" id="MLB-c3-CpM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomTextField" destination="sYM-wJ-FCX" id="77R-fq-hgb"/>

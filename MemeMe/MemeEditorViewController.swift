@@ -15,6 +15,9 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
+    var memedImage: UIImage?
+    var memeClass: MemeClass!
+    
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName : UIColor.whiteColor(),
@@ -107,6 +110,33 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.clearsOnBeginEditing = true
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.setToolbarHidden(true, animated: true)
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setToolbarHidden(false, animated: true)
+        return memedImage
+    }
+    
+    func save() {
+        memedImage = generateMemedImage()
+        
+        var meme = MemeClass(text1: topTextField.text, text2: bottomTextField.text, image: imageView.image!, memedImage: memedImage!)
+    }
+    
+    @IBAction func shareMeme(sender: AnyObject) {
+        save()
+        let controller = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
+        self.presentViewController(controller, animated: true, completion: nil)
     }
 }
 
