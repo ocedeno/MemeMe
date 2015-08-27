@@ -43,8 +43,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        
         subscribeToKeyboardNotifications()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -133,7 +133,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         var meme = MemeClass(text1: topTextField.text, text2: bottomTextField.text, image: imageView.image!, memedImage: memedImage!)
     }
     
-    @IBAction func shareMeme(sender: AnyObject) {
+    func shareMeme() {
         save()
         let controller = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
         self.presentViewController(controller, animated: true, completion: nil)
