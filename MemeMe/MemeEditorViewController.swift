@@ -71,12 +71,12 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imageView.image = image
             imageView.contentMode = UIViewContentMode.ScaleAspectFit
+            self.navigationItem.leftBarButtonItem?.enabled = true
         }else{
             print("Could not set image to view.")
         }
-        self.dismissViewControllerAnimated(true) { () -> Void in
-            self.navigationItem.leftBarButtonItem?.enabled = true
-        }
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -103,19 +103,21 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
 
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.setToolbarHidden(false, animated: true)
+
         return memedImage
     }
 
     func shareMeme() {
         let controller = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
         self.presentViewController(controller, animated: true) {() -> Void in
-        self.saveMeme()
+            self.saveMeme()
         }
     }
 
     func saveMeme() {
-        let meme = MemeClass(text1: topTextField.text, text2: bottomTextField.text, image: imageView.image!, memedImage: generateMemedImage())
-        UIImageWriteToSavedPhotosAlbum(generateMemedImage(), self, nil, nil)
+        memedImage = generateMemedImage()
+        let meme = MemeClass(text1: topTextField.text, text2: bottomTextField.text, image: imageView.image!, memedImage: memedImage!)
+        UIImageWriteToSavedPhotosAlbum(memedImage, self, nil, nil)
     }
     
     func subscribeToKeyboardNotifications(){
