@@ -38,8 +38,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         bottomTextField.textAlignment = .Center
         bottomTextField.text = "EDIT TEXT"
 
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
-        self.navigationItem.leftBarButtonItem?.enabled = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
+        navigationItem.leftBarButtonItem?.enabled = false
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -64,19 +64,19 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
             }else{
                 controller.sourceType = UIImagePickerControllerSourceType.Camera
             }
-        self.presentViewController(controller, animated: true, completion: nil)
+        presentViewController(controller, animated: true, completion: nil)
     }
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imageView.image = image
             imageView.contentMode = UIViewContentMode.ScaleAspectFit
-            self.navigationItem.leftBarButtonItem?.enabled = true
+            navigationItem.leftBarButtonItem?.enabled = true
         }else{
             print("Could not set image to view.")
         }
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -89,15 +89,15 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
 
     @IBAction func cancelSharing(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     func generateMemedImage() -> UIImage {
         navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.setToolbarHidden(true, animated: true)
 
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
@@ -110,7 +110,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     func shareMeme() {
         saveMeme()
         let controller = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
-        self.presentViewController(controller, animated: true, completion: nil)
+        presentViewController(controller, animated: true, completion: nil)
     }
 
     func saveMeme() {
@@ -131,13 +131,13 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func keyboardWillShow(notification: NSNotification) {
         if bottomTextField.isFirstResponder(){
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
         if bottomTextField.isFirstResponder() {
-            self.view.frame.origin.y += getKeyboardHeight(notification)
+            view.frame.origin.y += getKeyboardHeight(notification)
         }
     }
     
