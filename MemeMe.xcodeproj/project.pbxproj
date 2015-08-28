@@ -14,6 +14,7 @@
 		D51EE3311B8E6E8200BB94FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D51EE32F1B8E6E8200BB94FF /* LaunchScreen.xib */; };
 		D51EE33D1B8E6E8200BB94FF /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EE33C1B8E6E8200BB94FF /* MemeMeTests.swift */; };
 		D51EE3471B8E776400BB94FF /* MemeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EE3461B8E776400BB94FF /* MemeClass.swift */; };
+		D5C78EE41B8FE3840097B900 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5C78EE31B8FE2C60097B900 /* Impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D51EE33B1B8E6E8200BB94FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D51EE33C1B8E6E8200BB94FF /* MemeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeTests.swift; sourceTree = "<group>"; };
 		D51EE3461B8E776400BB94FF /* MemeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeClass.swift; sourceTree = "<group>"; };
+		D5C78EE31B8FE2C60097B900 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		D51EE3241B8E6E8200BB94FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D5C78EE31B8FE2C60097B900 /* Impact.ttf */,
 				D51EE3251B8E6E8200BB94FF /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C78EE41B8FE3840097B900 /* Impact.ttf in Resources */,
 				D51EE32C1B8E6E8200BB94FF /* Main.storyboard in Resources */,
 				D51EE3311B8E6E8200BB94FF /* LaunchScreen.xib in Resources */,
 				D51EE32E1B8E6E8200BB94FF /* Images.xcassets in Resources */,
@@ -416,6 +420,7 @@
 				D51EE3421B8E6E8200BB94FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D51EE3431B8E6E8200BB94FF /* Build configuration list for PBXNativeTarget "MemeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				D51EE3451B8E6E8200BB94FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

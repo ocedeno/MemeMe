@@ -21,8 +21,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName : UIColor.whiteColor(),
-        NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName : -3.0
+        NSFontAttributeName : UIFont(name: "Impact", size: 40)!,
+        NSStrokeWidthAttributeName : -1.5
     ]
     
     override func viewDidLoad() {
@@ -32,6 +32,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         topTextField.defaultTextAttributes = memeTextAttributes
         topTextField.textAlignment = .Center
         topTextField.text = "TOP"
+        
         
         bottomTextField.delegate = self
         bottomTextField.defaultTextAttributes = memeTextAttributes

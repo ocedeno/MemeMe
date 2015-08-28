@@ -4,6 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Impact.ttf">
+            <string>Impact</string>
+            <string>Impact</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Meme Editor View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -22,22 +28,22 @@
                                 <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYM-wJ-FCX">
-                                <rect key="frame" x="16" y="559" width="343" height="30"/>
+                                <rect key="frame" x="16" y="564" width="343" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nx8-VW-q4V">
                                 <rect key="frame" x="16" y="103" width="343" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <animations/>
                         <constraints>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1Cn-Tq-Gwn"/>
-                            <constraint firstItem="sYM-wJ-FCX" firstAttribute="top" secondItem="jdM-i6-MSu" secondAttribute="bottom" constant="-64" id="56c-YU-SHS"/>
+                            <constraint firstItem="sYM-wJ-FCX" firstAttribute="top" secondItem="jdM-i6-MSu" secondAttribute="bottom" constant="-59" id="56c-YU-SHS"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9jv-kR-TqR"/>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="64" id="AB6-Xi-GgV"/>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottomMargin" constant="-44" id="PBM-4H-bD1"/>
