@@ -15,7 +15,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
 
-    var memeClass: MemeClass!
+    var memeClass: MemeClass?
     var memedImage: UIImage?
 
     let memeTextAttributes = [
@@ -86,6 +86,10 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
 
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.clearsOnBeginEditing = true
+    }
+
+    @IBAction func cancelSharing(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     func generateMemedImage() -> UIImage {

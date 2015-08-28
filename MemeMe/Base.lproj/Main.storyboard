@@ -92,6 +92,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="QrI-n5-1AS">
                         <barButtonItem key="leftBarButtonItem" title="Share" id="OcJ-fK-Rfz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="GFN-5e-3rJ">
+                            <connections>
+                                <action selector="cancelSharing:" destination="vXZ-lx-hvc" id="L1y-xU-qdM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
