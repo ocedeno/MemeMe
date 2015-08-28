@@ -31,12 +31,12 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         topTextField.delegate = self
         topTextField.defaultTextAttributes = memeTextAttributes
         topTextField.textAlignment = .Center
-        topTextField.text = "TOP"
+        topTextField.text = "EDIT TEXT"
 
         bottomTextField.delegate = self
         bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.textAlignment = .Center
-        bottomTextField.text = "BOTTOM"
+        bottomTextField.text = "EDIT TEXT"
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
         self.navigationItem.leftBarButtonItem?.enabled = false
