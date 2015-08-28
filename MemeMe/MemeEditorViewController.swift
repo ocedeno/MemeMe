@@ -28,15 +28,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        topTextField.delegate = self
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.textAlignment = .Center
-        topTextField.text = "EDIT TEXT"
-
-        bottomTextField.delegate = self
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.textAlignment = .Center
-        bottomTextField.text = "EDIT TEXT"
+        designatingTextAttributes(topTextField)
+        designatingTextAttributes(bottomTextField)
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
         navigationItem.leftBarButtonItem?.enabled = false
@@ -55,6 +48,13 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
 
         unsubscribeFromKeyboardNotification()
     }
+    
+    func designatingTextAttributes(textField: UITextField){
+        textField.delegate = self
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .Center
+        textField.text = "EDIT TEXT"
+    }
 
     @IBAction func pickImage(sender: UIBarButtonItem){
         let controller = UIImagePickerController()
@@ -72,7 +72,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
             imageView.image = image
             imageView.contentMode = UIViewContentMode.ScaleAspectFit
             navigationItem.leftBarButtonItem?.enabled = true
-        }else{
+        } else {
             let errorAlertController = UIAlertController()
             errorAlertController.title = "Issue in Selecting Image"
             errorAlertController.message = "Could not set the image to the view."
@@ -84,7 +84,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
             
             print("Could not set image to view.")
         }
-        
+
         dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -145,9 +145,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        if bottomTextField.isFirstResponder() {
             view.frame.origin.y = 0
-        }
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
