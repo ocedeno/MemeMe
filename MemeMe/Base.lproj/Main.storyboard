@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdM-i6-MSu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdM-i6-MSu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <animations/>
                             </imageView>
@@ -98,6 +98,7 @@
                         <outlet property="bottomTextField" destination="sYM-wJ-FCX" id="77R-fq-hgb"/>
                         <outlet property="cameraButton" destination="59T-ua-MxI" id="JSK-kF-dIF"/>
                         <outlet property="imageView" destination="jdM-i6-MSu" id="HyZ-aw-u0w"/>
+                        <outlet property="mainView" destination="kh9-bI-dsS" id="OGF-Vt-xWU"/>
                         <outlet property="topTextField" destination="nx8-VW-q4V" id="L6Q-l5-1X8"/>
                     </connections>
                 </viewController>

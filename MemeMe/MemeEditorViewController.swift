@@ -15,6 +15,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
+    @IBOutlet var mainView: UIView!
     var memeClass: MemeClass!
     var memedImage: UIImage?
     
@@ -47,6 +48,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        
         subscribeToKeyboardNotifications()
     }
     
@@ -142,6 +144,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         let controller = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
         self.presentViewController(controller, animated: true, completion: nil)
     }
+    
 }
 
 
