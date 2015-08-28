@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdM-i6-MSu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYM-wJ-FCX">
-                                <rect key="frame" x="16" y="575" width="343" height="30"/>
+                                <rect key="frame" x="16" y="559" width="343" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nx8-VW-q4V">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <rect key="frame" x="16" y="103" width="343" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -37,18 +37,36 @@
                         <animations/>
                         <constraints>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1Cn-Tq-Gwn"/>
+                            <constraint firstItem="sYM-wJ-FCX" firstAttribute="top" secondItem="jdM-i6-MSu" secondAttribute="bottom" constant="-64" id="56c-YU-SHS"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9jv-kR-TqR"/>
-                            <constraint firstItem="jdM-i6-MSu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="AB6-Xi-GgV"/>
-                            <constraint firstItem="jdM-i6-MSu" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottomMargin" id="PBM-4H-bD1"/>
+                            <constraint firstItem="jdM-i6-MSu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="64" id="AB6-Xi-GgV"/>
+                            <constraint firstItem="jdM-i6-MSu" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottomMargin" constant="-44" id="PBM-4H-bD1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jdM-i6-MSu" secondAttribute="trailing" constant="-16" id="QMg-3R-0Sf"/>
                             <constraint firstAttribute="centerX" secondItem="nx8-VW-q4V" secondAttribute="centerX" id="VC8-hu-h0S"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="aUE-QH-6wW"/>
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="aXi-bf-YYk"/>
+                            <constraint firstItem="nx8-VW-q4V" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eST-xx-8lt"/>
                             <constraint firstAttribute="centerX" secondItem="sYM-wJ-FCX" secondAttribute="centerX" id="ess-CL-7qk"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="fch-OR-2EX"/>
+                            <constraint firstItem="sYM-wJ-FCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gzD-hX-CQs"/>
+                            <constraint firstItem="jdM-i6-MSu" firstAttribute="top" secondItem="nx8-VW-q4V" secondAttribute="bottom" constant="-69" id="kTy-k6-9Pz"/>
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="oUq-FS-lKs"/>
+                            <constraint firstItem="sYM-wJ-FCX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qBB-9M-4x3"/>
+                            <constraint firstItem="nx8-VW-q4V" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="x8U-FO-q44"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sYM-wJ-FCX" secondAttribute="bottom" constant="18" id="xGn-fu-H1Z"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9jv-kR-TqR"/>
+                                <exclude reference="VC8-hu-h0S"/>
+                                <exclude reference="aUE-QH-6wW"/>
+                                <exclude reference="fch-OR-2EX"/>
+                                <exclude reference="aXi-bf-YYk"/>
+                                <exclude reference="ess-CL-7qk"/>
+                                <exclude reference="oUq-FS-lKs"/>
+                                <exclude reference="xGn-fu-H1Z"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="vLP-Gm-j0d"/>
@@ -59,7 +77,7 @@
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xDf-d1-mJ4"/>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Tiv-s0-Nuc"/>
-                        <barButtonItem image="Camera" id="59T-ua-MxI">
+                        <barButtonItem systemItem="camera" id="59T-ua-MxI">
                             <connections>
                                 <action selector="pickImage:" destination="vXZ-lx-hvc" id="UG4-Fl-xBO"/>
                             </connections>
@@ -106,7 +124,4 @@
             <point key="canvasLocation" x="1149.5" y="670.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Camera" width="25" height="25"/>
-    </resources>
 </document>
