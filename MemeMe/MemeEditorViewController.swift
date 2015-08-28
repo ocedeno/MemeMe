@@ -69,7 +69,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imageView.image = image
             imageView.contentMode = UIViewContentMode.ScaleAspectFit
@@ -91,7 +90,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     func generateMemedImage() -> UIImage {
-        
         navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.setToolbarHidden(true, animated: true)
         
@@ -145,16 +143,3 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         return keyboardSize.CGRectValue().height
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
