@@ -15,7 +15,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
-    @IBOutlet var mainView: UIView!
     var memeClass: MemeClass!
     var memedImage: UIImage?
     
