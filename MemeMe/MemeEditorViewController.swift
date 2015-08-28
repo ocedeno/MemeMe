@@ -73,6 +73,15 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
             imageView.contentMode = UIViewContentMode.ScaleAspectFit
             navigationItem.leftBarButtonItem?.enabled = true
         }else{
+            let errorAlertController = UIAlertController()
+            errorAlertController.title = "Issue in Selecting Image"
+            errorAlertController.message = "Could not set the image to the view."
+            let okAction = UIAlertAction(title: "Dismiss", style: .Default){ action in
+                self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            errorAlertController.addAction(okAction)
+            self.presentViewController(errorAlertController, animated: true, completion: nil)
+            
             print("Could not set image to view.")
         }
         
@@ -137,7 +146,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func keyboardWillHide(notification: NSNotification) {
         if bottomTextField.isFirstResponder() {
-            view.frame.origin.y += getKeyboardHeight(notification)
+            view.frame.origin.y = 0
         }
     }
     
