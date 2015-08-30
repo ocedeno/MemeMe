@@ -8,10 +8,20 @@
 
 import UIKit
 
-class MemeTableViewController: UIViewController, UITableViewDelegate {
+class MemeTableViewController: UITableViewController {
+    
+    var memes = [MemeClass]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return memes.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell
     }
 }
