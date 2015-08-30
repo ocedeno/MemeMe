@@ -125,7 +125,9 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     func saveMeme() {
         memedImage = generateMemedImage()
         let meme = MemeClass(text1: topTextField.text, text2: bottomTextField.text, image: imageView.image!, memedImage: memedImage!)
-        UIImageWriteToSavedPhotosAlbum(memedImage, self, nil, nil)
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as? AppDelegate
+        appDelegate?.memes.append(meme)
     }
     
     func subscribeToKeyboardNotifications(){
