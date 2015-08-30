@@ -142,7 +142,13 @@
                             <outlet property="delegate" destination="urt-Cd-MAt" id="qdt-0j-SHp"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="HfR-rT-JaP"/>
+                    <navigationItem key="navigationItem" id="HfR-rT-JaP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gHQ-5T-fC0">
+                            <connections>
+                                <segue destination="pre-DE-GlK" kind="presentation" id="aPO-7X-ElQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xI-MH-yov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,7 +178,13 @@
                             <outlet property="delegate" destination="3OY-yJ-IIT" id="Sds-iX-c6i"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="S8p-kZ-mfd"/>
+                    <navigationItem key="navigationItem" id="S8p-kZ-mfd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ORc-95-Qu1">
+                            <connections>
+                                <segue destination="pre-DE-GlK" kind="presentation" id="l0W-LF-eb9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxk-Vq-tar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,4 +275,7 @@
             <point key="canvasLocation" x="4784" y="586"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="l0W-LF-eb9"/>
+    </inferredMetricsTieBreakers>
 </document>
