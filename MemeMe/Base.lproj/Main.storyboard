@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sjt-v5-Sdq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sjt-v5-Sdq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -140,14 +140,14 @@
                                             <rect key="frame" x="58" y="8" width="42" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-k8-oHr">
                                             <rect key="frame" x="58" y="117" width="42" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -201,7 +201,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -263,8 +263,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="fiK-sy-dsJ" kind="relationship" relationship="viewControllers" id="Bkb-2L-UYT"/>
                         <segue destination="qw2-IF-p6V" kind="relationship" relationship="viewControllers" id="R83-qw-SbM"/>
+                        <segue destination="fiK-sy-dsJ" kind="relationship" relationship="viewControllers" id="Bkb-2L-UYT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juZ-ax-COx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -275,7 +275,7 @@
         <scene sceneID="JhY-UJ-epR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fiK-sy-dsJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="Xqp-At-qAf"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="CollectionIcon" id="Xqp-At-qAf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Btd-I2-kCs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -295,7 +295,7 @@
         <scene sceneID="T7I-tc-VDT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qw2-IF-p6V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="wur-jt-Idz"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="TableIcon" id="wur-jt-Idz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d6E-Kz-8Cz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -312,7 +312,11 @@
             <point key="canvasLocation" x="4784" y="586"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CollectionIcon" width="30" height="30"/>
+        <image name="TableIcon" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l0W-LF-eb9"/>
+        <segue reference="aPO-7X-ElQ"/>
     </inferredMetricsTieBreakers>
 </document>
