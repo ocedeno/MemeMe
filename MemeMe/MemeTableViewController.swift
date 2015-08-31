@@ -18,6 +18,12 @@ class MemeTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
@@ -27,8 +33,7 @@ class MemeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath) as! UITableViewCell
         let memeInfo = memes[indexPath.row]
         
-        cell.textLabel?.text = memeInfo.topText
-        cell.detailTextLabel?.text = memeInfo.bottomText
+        cell.textLabel?.text = "\(memeInfo.topText)...\(memeInfo.bottomText)"
         cell.imageView?.image = memeInfo.memedImage
         
         return cell
