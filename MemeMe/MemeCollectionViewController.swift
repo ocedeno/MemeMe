@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeCollectionViewController: UICollectionViewController {
+class MemeCollectionViewController: UICollectionViewCell, UICollectionViewDelegate {
 
     var memes = [MemeClass]()
     
@@ -25,7 +25,9 @@ class MemeCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCollectionViewController", forIndexPath: indexPath) as? MemeCollectionViewController
         let meme = memes[indexPath.item]
-        cell.setText(meme.text1, bottom: meme.text2)
+        cell.setText(meme.topText, bottom: meme.bottomText)
+        let imageView = UIImageView(image: meme.image)
+        cell.backgroundView = imageView
         
     }
 }
