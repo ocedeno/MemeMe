@@ -5,9 +5,6 @@
       location = "group:../MemeMe/CollectionViewCell.swift">
    </FileRef>
    <FileRef
-      location = "group:../MemeMe/TableViewCell.swift">
-   </FileRef>
-   <FileRef
       location = "self:MemeMe.xcodeproj">
    </FileRef>
 </Workspace>

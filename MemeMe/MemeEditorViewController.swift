@@ -130,6 +130,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as? AppDelegate
         appDelegate?.memes.append(meme)
+        
     }
     
     func subscribeToKeyboardNotifications(){

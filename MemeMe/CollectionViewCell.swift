@@ -10,13 +10,14 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    var topText: String!
-    var bottomText: String!
-    var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var bottomLabel: UILabel!
+    
     
     func setText (top: String, bottom: String){
-        topText = top
-        bottomText = bottom
+        topLabel.text = top
+        bottomLabel.text = bottom
         
     }
 }

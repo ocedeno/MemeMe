@@ -28,7 +28,7 @@ class MemeCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CollectionViewCell
         let meme = memes[indexPath.item]
         cell.setText(meme.topText, bottom: meme.bottomText)
-        let imageView = UIImageView(image: meme.image)
+        let imageView = UIImageView(image: meme.memedImage)
         cell.backgroundView = imageView
         
         return cell
