@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeTableViewController: UITableViewCell, UITableViewDelegate {
+class MemeTableViewController: UITableViewController {
     
     var memes = [MemeClass]()
     
@@ -22,6 +22,7 @@ class MemeTableViewController: UITableViewCell, UITableViewDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MemeTableViewController", forIndexPath: indexPath) as? MemeTableViewController
+        cell
     }
 }
