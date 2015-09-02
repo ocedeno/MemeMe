@@ -141,37 +141,17 @@
                                                 <constraint firstAttribute="width" constant="185" id="OKh-YP-PTc"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-k8-oHr">
-                                            <rect key="frame" x="71" y="123" width="42" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8N-4v-xIc">
-                                            <rect key="frame" x="71" y="20" width="42" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="bzl-k8-oHr" firstAttribute="bottom" secondItem="PLf-r2-Hv7" secondAttribute="bottomMargin" constant="-15" id="4tx-1d-jYy"/>
                                     <constraint firstAttribute="centerY" secondItem="ow2-kd-bRy" secondAttribute="centerY" id="Gva-XA-2wK"/>
-                                    <constraint firstItem="k8N-4v-xIc" firstAttribute="top" secondItem="PLf-r2-Hv7" secondAttribute="topMargin" constant="12" id="JWF-cx-kD6"/>
                                     <constraint firstAttribute="centerX" secondItem="ow2-kd-bRy" secondAttribute="centerX" id="lwl-5w-f4E"/>
-                                    <constraint firstAttribute="centerX" secondItem="bzl-k8-oHr" secondAttribute="centerX" id="mvf-EU-elN"/>
-                                    <constraint firstAttribute="centerX" secondItem="k8N-4v-xIc" secondAttribute="centerX" id="nm1-4h-AGL"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="collectionBottomLabel" destination="bzl-k8-oHr" id="xYe-l6-Jjs"/>
                                     <outlet property="collectionImageView" destination="ow2-kd-bRy" id="UQv-a2-Kbd"/>
-                                    <outlet property="collectionTopLabel" destination="k8N-4v-xIc" id="iTb-Lj-tVt"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -210,22 +190,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VCG-tc-CBE" id="IUk-VU-EMW">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30U-Ol-Ndt">
-                                            <rect key="frame" x="189" y="8" width="412" height="43"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dS8-hb-nh0">
-                                            <rect key="frame" x="189" y="50" width="412" height="43"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uat-MR-CJa">
-                                            <rect key="frame" x="0.0" y="-1" width="181" height="102"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cd7-1P-MNB">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="101"/>
                                             <animations/>
                                         </imageView>
                                     </subviews>
@@ -233,11 +199,6 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <connections>
-                                    <outlet property="cellBottomLabel" destination="dS8-hb-nh0" id="DX9-Ft-9iG"/>
-                                    <outlet property="cellImageView" destination="uat-MR-CJa" id="3Tx-22-EQx"/>
-                                    <outlet property="cellTopLabel" destination="30U-Ol-Ndt" id="UjK-op-pnq"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -16,6 +16,8 @@ class MemeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorColor = UIColor.clearColor()
 
     }
 
@@ -33,7 +35,7 @@ class MemeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath) as! TableViewCell
         let meme = memes[indexPath.row]
         
-        cell.setTableProperties(meme.topText, bottomText: meme.bottomText, imageViewImage: meme.memedImage)
+        cell.setTableProperties(meme.topText, bottomText: meme.bottomText, imageViewImage: meme.image)
         
         return cell
     }
