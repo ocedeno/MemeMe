@@ -19,7 +19,6 @@ class CollectionViewCell: UICollectionViewCell {
         collectionTopLabel.text = top
         collectionBottomLabel.text = bottom
         collectionImageView.image = backgroundImage
-        collectionImageView.contentMode = .ScaleAspectFit
-        
+        collectionImageView.contentMode = .ScaleAspectFill
     }
 }
