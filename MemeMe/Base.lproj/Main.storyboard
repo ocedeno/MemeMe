@@ -119,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bqb-Ng-but">
-                            <size key="itemSize" width="158" height="146"/>
+                            <size key="itemSize" width="185" height="167"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -129,22 +129,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="158" height="146"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="167"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="CollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="ow2-kd-bRy">
-                                            <rect key="frame" x="-22" y="0.0" width="180" height="160"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="ow2-kd-bRy">
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="167"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="167" id="20M-Gs-liQ"/>
+                                                <constraint firstAttribute="width" constant="185" id="OKh-YP-PTc"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8N-4v-xIc">
-                                            <rect key="frame" x="58" y="8" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-k8-oHr">
+                                            <rect key="frame" x="71" y="123" width="42" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-k8-oHr">
-                                            <rect key="frame" x="58" y="117" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8N-4v-xIc">
+                                            <rect key="frame" x="71" y="20" width="42" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,6 +159,14 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="bzl-k8-oHr" firstAttribute="bottom" secondItem="PLf-r2-Hv7" secondAttribute="bottomMargin" id="4tx-1d-jYy"/>
+                                    <constraint firstAttribute="centerY" secondItem="ow2-kd-bRy" secondAttribute="centerY" id="Gva-XA-2wK"/>
+                                    <constraint firstItem="k8N-4v-xIc" firstAttribute="top" secondItem="PLf-r2-Hv7" secondAttribute="topMargin" constant="12" id="JWF-cx-kD6"/>
+                                    <constraint firstAttribute="centerX" secondItem="ow2-kd-bRy" secondAttribute="centerX" id="lwl-5w-f4E"/>
+                                    <constraint firstAttribute="centerX" secondItem="bzl-k8-oHr" secondAttribute="centerX" id="mvf-EU-elN"/>
+                                    <constraint firstAttribute="centerX" secondItem="k8N-4v-xIc" secondAttribute="centerX" id="nm1-4h-AGL"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="collectionBottomLabel" destination="bzl-k8-oHr" id="xYe-l6-Jjs"/>
                                     <outlet property="collectionImageView" destination="ow2-kd-bRy" id="UQv-a2-Kbd"/>
@@ -354,6 +366,6 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l0W-LF-eb9"/>
+        <segue reference="aPO-7X-ElQ"/>
     </inferredMetricsTieBreakers>
 </document>
