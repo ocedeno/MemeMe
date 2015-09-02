@@ -9,15 +9,17 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var collectionImageView: UIImageView!
+    @IBOutlet weak var collectionTopLabel: UILabel!
+    @IBOutlet weak var collectionBottomLabel: UILabel!
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var topLabel: UILabel!
-    @IBOutlet weak var bottomLabel: UILabel!
     
-    
-    func setText (top: String, bottom: String){
-        topLabel.text = top
-        bottomLabel.text = bottom
+    func setProperties (top: String, bottom: String, backgroundImage: UIImage){
+        collectionTopLabel.text = top
+        collectionBottomLabel.text = bottom
+        collectionImageView.image = backgroundImage
+        collectionImageView.contentMode = .ScaleAspectFit
         
     }
 }
