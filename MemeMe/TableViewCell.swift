@@ -18,7 +18,6 @@ class TableViewCell: UITableViewCell {
         cellTopLabel.text = topText
         cellBottomLabel.text = bottomText
         cellImageView.image = imageViewImage
-        cellImageView.contentMode = .ScaleAspectFit
     }
     
     

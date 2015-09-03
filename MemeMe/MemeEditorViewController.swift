@@ -119,6 +119,11 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     func shareMeme() {
         saveMeme()
         let controller = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
+        controller.completionWithItemsHandler = {(activy, completed, items, error) in
+            if (completed){
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
         presentViewController(controller, animated: true, completion: nil)
     }
 

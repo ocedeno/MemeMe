@@ -133,7 +133,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="185" height="167"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="ow2-kd-bRy">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="ow2-kd-bRy">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="167"/>
                                             <animations/>
                                             <constraints>
@@ -194,11 +194,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="101"/>
                                             <animations/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-ma-P6P">
+                                            <rect key="frame" x="133" y="8" width="459" height="43"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-ha-aW8">
+                                            <rect key="frame" x="133" y="50" width="459" height="43"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="cellBottomLabel" destination="Ocu-ha-aW8" id="n0p-yt-NSg"/>
+                                    <outlet property="cellImageView" destination="Cd7-1P-MNB" id="xRe-kT-04H"/>
+                                    <outlet property="cellTopLabel" destination="a4g-ma-P6P" id="yLz-uY-Qas"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -262,11 +281,11 @@
             </objects>
             <point key="canvasLocation" x="3986" y="186"/>
         </scene>
-        <!--Collection-->
+        <!--Navigation Controller-->
         <scene sceneID="JhY-UJ-epR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fiK-sy-dsJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" image="CollectionIcon" id="Xqp-At-qAf"/>
+                    <tabBarItem key="tabBarItem" title="" image="CollectionIcon" id="Xqp-At-qAf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Btd-I2-kCs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -282,11 +301,11 @@
             </objects>
             <point key="canvasLocation" x="4793" y="-202"/>
         </scene>
-        <!--Table-->
+        <!--Navigation Controller-->
         <scene sceneID="T7I-tc-VDT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qw2-IF-p6V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" image="TableIcon" id="wur-jt-Idz"/>
+                    <tabBarItem key="tabBarItem" title="" image="TableIcon" id="wur-jt-Idz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d6E-Kz-8Cz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
