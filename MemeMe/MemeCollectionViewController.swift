@@ -48,4 +48,17 @@ class MemeCollectionViewController: UICollectionViewController {
         cell.labelAttributes()
         return cell
     }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let meme = memes[indexPath.row]
+        performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "memeDetailView") {
+            let data = sender as! UIImage
+            let memeDetailVC = segue.destinationViewController as! MemeDetailViewController
+            memeDetailVC.image = data
+        }
+    }
 }

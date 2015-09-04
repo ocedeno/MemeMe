@@ -191,6 +191,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="bqb-Ng-but" id="m7D-k2-f2d"/>
+                        <segue destination="5Az-vx-Otr" kind="show" identifier="memeDetailView" id="Syo-BZ-GEB"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xI-MH-yov" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,7 +275,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-ZJ-LA2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-ZJ-LA2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
@@ -386,6 +387,7 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l0W-LF-eb9"/>
+        <segue reference="aPO-7X-ElQ"/>
+        <segue reference="Syo-BZ-GEB"/>
     </inferredMetricsTieBreakers>
 </document>
