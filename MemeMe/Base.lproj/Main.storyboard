@@ -254,6 +254,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5Az-vx-Otr" kind="show" identifier="memeDetailView" id="hVh-0b-HgP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxk-Vq-tar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

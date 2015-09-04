@@ -38,4 +38,17 @@ class MemeTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let meme = memes[indexPath.row]
+        performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "memeDetailView") {
+            let data = sender as! UIImage
+            let memeDetailVC = segue.destinationViewController as! MemeDetailViewController
+            memeDetailVC.image = data
+        }
+    }
 }
