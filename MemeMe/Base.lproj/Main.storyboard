@@ -259,6 +259,40 @@
             </objects>
             <point key="canvasLocation" x="5619" y="585"/>
         </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="TzR-2b-eEQ">
+            <objects>
+                <viewController id="5Az-vx-Otr" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bFi-hG-dvq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yqm-em-8EK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iad-nW-jtt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-ZJ-LA2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="iad-nW-jtt" secondAttribute="topMargin" id="4b4-2o-mbt"/>
+                            <constraint firstItem="Yqm-em-8EK" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="8Ix-RO-efP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" constant="-16" id="WMo-0P-Hgl"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="zHd-6M-UHP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="memeViewImage" destination="uc7-ZJ-LA2" id="RZq-oH-n0Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0T-5S-xnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6359" y="1026"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yg0-oO-Kd7">
             <objects>
@@ -349,6 +383,6 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aPO-7X-ElQ"/>
+        <segue reference="l0W-LF-eb9"/>
     </inferredMetricsTieBreakers>
 </document>

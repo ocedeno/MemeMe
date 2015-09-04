@@ -19,6 +19,7 @@
 		D57DF4571B93C97600A5F7BF /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57DF4561B93C97600A5F7BF /* MemeTableViewController.swift */; };
 		D57DF45B1B93D8BA00A5F7BF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57DF45A1B93D8BA00A5F7BF /* CollectionViewCell.swift */; };
 		D5C78EE41B8FE3840097B900 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5C78EE31B8FE2C60097B900 /* Impact.ttf */; };
+		D5FC86B11B9919CC000EC259 /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC86B01B9919CC000EC259 /* MemeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D57DF4561B93C97600A5F7BF /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 		D57DF45A1B93D8BA00A5F7BF /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D5C78EE31B8FE2C60097B900 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
+		D5FC86B01B9919CC000EC259 /* MemeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				D57DF4501B93C8C000A5F7BF /* MemeCollectionViewController.swift */,
 				D550D7421B9753C5001F2848 /* TableViewCell.swift */,
 				D57DF4561B93C97600A5F7BF /* MemeTableViewController.swift */,
+				D5FC86B01B9919CC000EC259 /* MemeDetailViewController.swift */,
 				D51EE32D1B8E6E8200BB94FF /* Images.xcassets */,
 				D51EE32F1B8E6E8200BB94FF /* LaunchScreen.xib */,
 				D51EE3241B8E6E8200BB94FF /* Supporting Files */,
@@ -241,6 +244,7 @@
 				D57DF4571B93C97600A5F7BF /* MemeTableViewController.swift in Sources */,
 				D550D7431B9753C5001F2848 /* TableViewCell.swift in Sources */,
 				D51EE3271B8E6E8200BB94FF /* AppDelegate.swift in Sources */,
+				D5FC86B11B9919CC000EC259 /* MemeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
