@@ -11,9 +11,24 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var collectionImageView: UIImageView!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var bottomLabel: UILabel!
     
-    func setProperties (backgroundImage: UIImage){
+    func setProperties (topText: String, bottomText: String,backgroundImage: UIImage){
+        topLabel.text = topText
+        bottomLabel.text = bottomText
         collectionImageView.image = backgroundImage
         collectionImageView.contentMode = .ScaleAspectFill
+    }
+    
+    func labelAttributes(){
+        
+        topLabel.font = UIFont(name: "Impact", size: 10.0)
+        topLabel.textColor = UIColor.whiteColor()
+        bottomLabel.font = UIFont(name: "Impact", size: 10.0)
+        bottomLabel.textColor = UIColor.whiteColor()
+        
+        var topText = topLabel.text!
+        var bottomText = bottomLabel.text!
     }
 }

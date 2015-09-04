@@ -141,17 +141,39 @@
                                                 <constraint firstAttribute="width" constant="185" id="OKh-YP-PTc"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMj-In-R1Q">
+                                            <rect key="frame" x="8" y="8" width="169" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-qI-zNn">
+                                            <rect key="frame" x="8" y="138" width="169" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="zMj-In-R1Q" firstAttribute="centerX" secondItem="ow2-kd-bRy" secondAttribute="centerX" id="3ey-6P-xmP"/>
+                                    <constraint firstItem="ULP-qI-zNn" firstAttribute="leading" secondItem="PLf-r2-Hv7" secondAttribute="leadingMargin" id="611-Pn-thL"/>
                                     <constraint firstAttribute="centerY" secondItem="ow2-kd-bRy" secondAttribute="centerY" id="Gva-XA-2wK"/>
+                                    <constraint firstItem="zMj-In-R1Q" firstAttribute="top" secondItem="PLf-r2-Hv7" secondAttribute="topMargin" id="SIQ-6v-FRR"/>
+                                    <constraint firstItem="ULP-qI-zNn" firstAttribute="trailing" secondItem="zMj-In-R1Q" secondAttribute="trailing" id="lSM-FU-jgu"/>
                                     <constraint firstAttribute="centerX" secondItem="ow2-kd-bRy" secondAttribute="centerX" id="lwl-5w-f4E"/>
+                                    <constraint firstItem="ULP-qI-zNn" firstAttribute="bottom" secondItem="PLf-r2-Hv7" secondAttribute="bottomMargin" id="nnI-8N-tBi"/>
+                                    <constraint firstItem="ULP-qI-zNn" firstAttribute="leading" secondItem="zMj-In-R1Q" secondAttribute="leading" id="xew-iZ-bjI"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="bottomLabel" destination="ULP-qI-zNn" id="fEg-6F-fjU"/>
                                     <outlet property="collectionImageView" destination="ow2-kd-bRy" id="UQv-a2-Kbd"/>
+                                    <outlet property="topLabel" destination="zMj-In-R1Q" id="6Bj-3S-Lit"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -327,6 +349,6 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l0W-LF-eb9"/>
+        <segue reference="aPO-7X-ElQ"/>
     </inferredMetricsTieBreakers>
 </document>
