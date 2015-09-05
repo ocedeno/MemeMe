@@ -26,7 +26,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdM-i6-MSu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYM-wJ-FCX">
                                 <rect key="frame" x="16" y="564" width="343" height="49"/>
@@ -145,14 +145,14 @@
                                             <rect key="frame" x="8" y="8" width="169" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-qI-zNn">
                                             <rect key="frame" x="8" y="138" width="169" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -221,14 +221,14 @@
                                             <rect key="frame" x="133" y="8" width="459" height="43"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-ha-aW8">
                                             <rect key="frame" x="133" y="50" width="459" height="43"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -275,17 +275,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-ZJ-LA2">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-ZJ-LA2">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l20-gG-OCl">
+                                <rect key="frame" x="0.0" y="558" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="q8S-p8-1ci"/>
+                                    <barButtonItem systemItem="trash" id="Td3-LH-B8U"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="tkc-Os-uhf"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="oNt-Ua-Dem"/>
+                                    <barButtonItem systemItem="edit" id="L9W-kT-0hJ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RWw-lk-oXm"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="iad-nW-jtt" secondAttribute="topMargin" id="4b4-2o-mbt"/>
-                            <constraint firstItem="Yqm-em-8EK" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="8Ix-RO-efP"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="iad-nW-jtt" secondAttribute="topMargin" constant="64" id="4b4-2o-mbt"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="5Mu-NF-HgC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" constant="-16" id="6wa-G5-LBQ"/>
+                            <constraint firstItem="Yqm-em-8EK" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" constant="-5" id="8Ix-RO-efP"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="bottom" secondItem="iad-nW-jtt" secondAttribute="bottomMargin" constant="-44" id="GP7-hA-8ri"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" constant="-16" id="WMo-0P-Hgl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l20-gG-OCl" secondAttribute="trailing" constant="-16" id="pk8-r5-eyg"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="iad-nW-jtt" secondAttribute="topMargin" constant="64" id="qlz-t1-sYJ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="l20-gG-OCl" secondAttribute="bottom" constant="-2" id="sM5-Ze-bvT"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="v8H-ib-BXr"/>
                             <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="zHd-6M-UHP"/>
                         </constraints>
                     </view>
@@ -295,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0T-5S-xnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6359" y="1026"/>
+            <point key="canvasLocation" x="7487" y="220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yg0-oO-Kd7">
@@ -387,7 +406,7 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aPO-7X-ElQ"/>
-        <segue reference="Syo-BZ-GEB"/>
+        <segue reference="hVh-0b-HgP"/>
+        <segue reference="l0W-LF-eb9"/>
     </inferredMetricsTieBreakers>
 </document>
