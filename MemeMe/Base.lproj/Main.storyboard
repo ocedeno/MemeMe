@@ -185,7 +185,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="HfR-rT-JaP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gHQ-5T-fC0">
                             <connections>
-                                <segue destination="pre-DE-GlK" kind="presentation" id="aPO-7X-ElQ"/>
+                                <segue destination="pre-DE-GlK" kind="presentation" identifier="editMemeVC" id="aPO-7X-ElQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -251,7 +251,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="S8p-kZ-mfd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ORc-95-Qu1">
                             <connections>
-                                <segue destination="pre-DE-GlK" kind="presentation" id="l0W-LF-eb9"/>
+                                <segue destination="pre-DE-GlK" kind="presentation" identifier="editMemeVC" id="l0W-LF-eb9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -284,10 +284,18 @@
                                 <animations/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="q8S-p8-1ci"/>
-                                    <barButtonItem systemItem="trash" id="Td3-LH-B8U"/>
+                                    <barButtonItem systemItem="trash" id="Td3-LH-B8U">
+                                        <connections>
+                                            <action selector="deleteMeme:" destination="5Az-vx-Otr" id="gDh-TL-Ko2"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="tkc-Os-uhf"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="oNt-Ua-Dem"/>
-                                    <barButtonItem systemItem="edit" id="L9W-kT-0hJ"/>
+                                    <barButtonItem systemItem="edit" id="L9W-kT-0hJ">
+                                        <connections>
+                                            <action selector="returnToMemeEditor:" destination="5Az-vx-Otr" id="1tm-zT-VSg"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="RWw-lk-oXm"/>
                                 </items>
                             </toolbar>
@@ -295,21 +303,18 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="iad-nW-jtt" secondAttribute="topMargin" constant="64" id="4b4-2o-mbt"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="5Mu-NF-HgC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" constant="-16" id="6wa-G5-LBQ"/>
-                            <constraint firstItem="Yqm-em-8EK" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" constant="-5" id="8Ix-RO-efP"/>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="bottom" secondItem="iad-nW-jtt" secondAttribute="bottomMargin" constant="-44" id="GP7-hA-8ri"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" constant="-16" id="WMo-0P-Hgl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="l20-gG-OCl" secondAttribute="trailing" constant="-16" id="pk8-r5-eyg"/>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="iad-nW-jtt" secondAttribute="topMargin" constant="64" id="qlz-t1-sYJ"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="l20-gG-OCl" secondAttribute="bottom" constant="-2" id="sM5-Ze-bvT"/>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="v8H-ib-BXr"/>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="zHd-6M-UHP"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leading" id="AE6-ba-jHN"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="bFi-hG-dvq" secondAttribute="bottom" id="Bea-tX-ZXg"/>
+                            <constraint firstAttribute="trailing" secondItem="l20-gG-OCl" secondAttribute="trailing" id="IBb-M1-R0f"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="l20-gG-OCl" secondAttribute="bottom" constant="-2" id="M6U-k4-Ncl"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" constant="2" id="UrQ-iB-Tfs"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="trailing" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" id="qcJ-XB-J7C"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="uc7-ZJ-LA2" secondAttribute="leading" id="rQT-hJ-mpQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="memeViewImage" destination="uc7-ZJ-LA2" id="RZq-oH-n0Q"/>
+                        <segue destination="pre-DE-GlK" kind="show" identifier="editMemeVC" id="Qp2-6F-Dqh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0T-5S-xnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -406,7 +411,7 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hVh-0b-HgP"/>
-        <segue reference="l0W-LF-eb9"/>
+        <segue reference="aPO-7X-ElQ"/>
+        <segue reference="Syo-BZ-GEB"/>
     </inferredMetricsTieBreakers>
 </document>

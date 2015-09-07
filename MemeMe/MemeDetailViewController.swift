@@ -9,8 +9,13 @@
 import UIKit
 
 class MemeDetailViewController: UIViewController {
+    
+    var memes: [MemeClass] {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+    }
 
     @IBOutlet weak var memeViewImage: UIImageView!
+    
     var image: UIImage!
     
     override func viewDidLoad() {
@@ -30,5 +35,26 @@ class MemeDetailViewController: UIViewController {
         
     navigationController?.tabBarController?.tabBar.hidden = false
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "editMemeVC"){
+            let data = sender as? UIImage
+            let nav = segue.destinationViewController as! UINavigationController
+            let editMeme = nav.topViewController as! MemeEditorViewController
+            editMeme.memedImage = data
+        }
+    }
+    
+    @IBAction func returnToMemeEditor(sender: UIBarButtonItem) {
+        var meme = memes[0]
+        performSegueWithIdentifier("editMemeVC", sender: meme.image)
+
+    }
+    
+    @IBAction func deleteMeme(sender: UIBarButtonItem) {
+        navigationController?.popToRootViewControllerAnimated(true)
+
+    }
+    
 }
 

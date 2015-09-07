@@ -41,6 +41,10 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
 
         subscribeToKeyboardNotifications()
+                
+        if (memedImage != nil){
+            imageView.image = memedImage
+        }
     }
 
     override func viewWillDisappear(animated: Bool) {
@@ -99,6 +103,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
 
     @IBAction func cancelSharing(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     func generateMemedImage() -> UIImage {
