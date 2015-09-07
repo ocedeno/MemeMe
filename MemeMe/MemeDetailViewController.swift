@@ -51,6 +51,7 @@ class MemeDetailViewController: UIViewController {
     }
     
     @IBAction func deleteMeme(sender: UIBarButtonItem) {
+        memes.removeAtIndex(rowSelected!)
         navigationController?.popToRootViewControllerAnimated(true)
 
     }
