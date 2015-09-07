@@ -33,7 +33,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         designatingTextAttributes(bottomTextField)
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareMeme")
-        navigationItem.leftBarButtonItem?.enabled = false
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -47,6 +46,12 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
                 
         if (memedImage != nil){
             imageView.image = memedImage
+        }
+        
+        if imageView.image == nil {
+            navigationItem.leftBarButtonItem?.enabled = false
+        }else {
+            navigationItem.leftBarButtonItem?.enabled = true
         }
     }
 
@@ -107,7 +112,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
 
     @IBAction func cancelSharing(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
         navigationController?.popToRootViewControllerAnimated(true)
     }
 

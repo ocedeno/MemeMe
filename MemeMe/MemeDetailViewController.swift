@@ -39,8 +39,7 @@ class MemeDetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "editMemeVC"){
             let data = sender as? UIImage
-            let nav = segue.destinationViewController as! UINavigationController
-            let editMeme = nav.topViewController as! MemeEditorViewController
+            let editMeme = segue.destinationViewController as! MemeEditorViewController
             editMeme.memedImage = data
         }
     }

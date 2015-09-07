@@ -294,6 +294,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l20-gG-OCl">
                                 <rect key="frame" x="0.0" y="558" width="600" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cEV-ud-hWP"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="q8S-p8-1ci"/>
                                     <barButtonItem systemItem="trash" id="Td3-LH-B8U">
@@ -315,16 +318,20 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" id="8q0-9M-YXL"/>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="bFi-hG-dvq" secondAttribute="bottom" id="Bea-tX-ZXg"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="ObV-tR-skR"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="trailing" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" id="f8s-3I-IZW"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="uc7-ZJ-LA2" secondAttribute="leading" id="omk-5s-Mkc"/>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leading" id="tmR-nN-mwC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l20-gG-OCl" secondAttribute="trailing" constant="-16" id="ES4-ux-K5C"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="K0O-51-8kV"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="Yqm-em-8EK" secondAttribute="bottom" constant="7" id="S4C-cF-grb"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="eNj-f4-W7X"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="bFi-hG-dvq" secondAttribute="bottom" id="lyK-6S-A4J"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="nMe-u2-NzX"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="rDe-Cv-oGs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" constant="-16" id="tPJ-Db-ffW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="l20-gG-OCl" secondAttribute="bottom" constant="-2" id="x2A-0f-aOG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="memeViewImage" destination="uc7-ZJ-LA2" id="RZq-oH-n0Q"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="editMemeVC" id="Nz3-lA-y8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0T-5S-xnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,7 +404,7 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zcy-Ac-GFE"/>
         <segue reference="hVh-0b-HgP"/>
+        <segue reference="Nz3-lA-y8S"/>
     </inferredMetricsTieBreakers>
 </document>
