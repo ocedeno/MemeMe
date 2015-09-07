@@ -10,6 +10,8 @@ import UIKit
 
 class MemeTableViewController: UITableViewController {
 
+    
+    var rowSelected: Int?
     var memes: [MemeClass] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
@@ -40,7 +42,8 @@ class MemeTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let meme = memes[indexPath.row]
+        rowSelected = indexPath.row
+        let meme = memes[rowSelected!]
         performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
     }
     
@@ -49,6 +52,7 @@ class MemeTableViewController: UITableViewController {
             let data = sender as! UIImage
             let memeDetailVC = segue.destinationViewController as! MemeDetailViewController
             memeDetailVC.image = data
+            memeDetailVC.rowSelected = rowSelected!
         }
     }
 }

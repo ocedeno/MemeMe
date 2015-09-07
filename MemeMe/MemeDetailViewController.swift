@@ -10,6 +10,7 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
+    var rowSelected: Int?
     var memes: [MemeClass] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
@@ -45,9 +46,8 @@ class MemeDetailViewController: UIViewController {
     }
     
     @IBAction func returnToMemeEditor(sender: UIBarButtonItem) {
-        var meme = memes[0]
+        var meme = memes[rowSelected!]
         performSegueWithIdentifier("editMemeVC", sender: meme.image)
-
     }
     
     @IBAction func deleteMeme(sender: UIBarButtonItem) {
