@@ -14,6 +14,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var toolBar: UIToolbar!
 
     var memeClass: MemeClass?
     var memedImage: UIImage?
@@ -38,6 +39,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
+        navigationController?.tabBarController?.tabBar.hidden = true
+        
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
 
         subscribeToKeyboardNotifications()
@@ -50,6 +53,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
 
+        navigationController?.tabBarController?.tabBar.hidden = false
+        
         unsubscribeFromKeyboardNotification()
     }
     
@@ -108,7 +113,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
 
     func generateMemedImage() -> UIImage {
         navigationController?.setNavigationBarHidden(true, animated: true)
-        navigationController?.setToolbarHidden(true, animated: true)
+        toolBar.hidden = true
 
         UIGraphicsBeginImageContext(view.frame.size)
         view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
@@ -116,7 +121,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         UIGraphicsEndImageContext()
 
         navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationController?.setToolbarHidden(false, animated: true)
+        toolBar.hidden = false
 
         return memedImage
     }

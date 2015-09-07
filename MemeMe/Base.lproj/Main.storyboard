@@ -40,6 +40,26 @@
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hph-fg-lNe">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7ms-hx-sLc"/>
+                                    <barButtonItem systemItem="camera" id="fRS-NX-ueZ">
+                                        <connections>
+                                            <action selector="pickImage:" destination="vXZ-lx-hvc" id="dfg-rn-pPV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xDf-d1-mJ4"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Tiv-s0-Nuc"/>
+                                    <barButtonItem title="Album" id="qfZ-Ko-Zao">
+                                        <connections>
+                                            <action selector="pickImage:" destination="vXZ-lx-hvc" id="bGL-Pp-T9h"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zdU-VK-Omn"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <constraints>
@@ -47,6 +67,7 @@
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="top" secondItem="jdM-i6-MSu" secondAttribute="bottom" constant="-59" id="56c-YU-SHS"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9jv-kR-TqR"/>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="64" id="AB6-Xi-GgV"/>
+                            <constraint firstItem="hph-fg-lNe" firstAttribute="trailing" secondItem="jdM-i6-MSu" secondAttribute="trailing" id="KaO-3f-fCf"/>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottomMargin" constant="-44" id="PBM-4H-bD1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jdM-i6-MSu" secondAttribute="trailing" constant="-16" id="QMg-3R-0Sf"/>
                             <constraint firstAttribute="centerX" secondItem="nx8-VW-q4V" secondAttribute="centerX" id="VC8-hu-h0S"/>
@@ -58,7 +79,9 @@
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gzD-hX-CQs"/>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="top" secondItem="nx8-VW-q4V" secondAttribute="bottom" constant="-69" id="kTy-k6-9Pz"/>
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="oUq-FS-lKs"/>
+                            <constraint firstItem="hph-fg-lNe" firstAttribute="leading" secondItem="jdM-i6-MSu" secondAttribute="leading" id="pcF-70-UYv"/>
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qBB-9M-4x3"/>
+                            <constraint firstItem="hph-fg-lNe" firstAttribute="top" secondItem="jdM-i6-MSu" secondAttribute="bottom" id="rs9-Tf-mCW"/>
                             <constraint firstItem="nx8-VW-q4V" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="x8U-FO-q44"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sYM-wJ-FCX" secondAttribute="bottom" constant="18" id="xGn-fu-H1Z"/>
                         </constraints>
@@ -75,22 +98,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vLP-Gm-j0d"/>
-                        <barButtonItem title="Album" id="DMs-cs-v0l">
-                            <connections>
-                                <action selector="pickImage:" destination="vXZ-lx-hvc" id="ef6-bu-7yG"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xDf-d1-mJ4"/>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Tiv-s0-Nuc"/>
-                        <barButtonItem systemItem="camera" id="59T-ua-MxI">
-                            <connections>
-                                <action selector="pickImage:" destination="vXZ-lx-hvc" id="UG4-Fl-xBO"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="kzT-Ty-bUx"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="QrI-n5-1AS">
                         <barButtonItem key="leftBarButtonItem" title="Share" id="OcJ-fK-Rfz"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="GFN-5e-3rJ">
@@ -102,14 +110,15 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomTextField" destination="sYM-wJ-FCX" id="77R-fq-hgb"/>
-                        <outlet property="cameraButton" destination="59T-ua-MxI" id="JSK-kF-dIF"/>
+                        <outlet property="cameraButton" destination="fRS-NX-ueZ" id="AYF-Je-e6j"/>
                         <outlet property="imageView" destination="jdM-i6-MSu" id="HyZ-aw-u0w"/>
+                        <outlet property="toolBar" destination="hph-fg-lNe" id="ruk-xW-njf"/>
                         <outlet property="topTextField" destination="nx8-VW-q4V" id="L6Q-l5-1X8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6832.5" y="214.5"/>
+            <point key="canvasLocation" x="6320.5" y="219.5"/>
         </scene>
         <!--Sent Memes-->
         <scene sceneID="qcv-VM-n6j">
@@ -185,7 +194,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="HfR-rT-JaP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gHQ-5T-fC0">
                             <connections>
-                                <segue destination="pre-DE-GlK" kind="presentation" identifier="editMemeVC" id="aPO-7X-ElQ"/>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="GI4-aX-kbe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -251,7 +260,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="S8p-kZ-mfd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ORc-95-Qu1">
                             <connections>
-                                <segue destination="pre-DE-GlK" kind="presentation" identifier="editMemeVC" id="l0W-LF-eb9"/>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="zcy-Ac-GFE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -276,8 +285,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-ZJ-LA2">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="494"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="494" id="NwD-9u-Rn4"/>
+                                </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l20-gG-OCl">
                                 <rect key="frame" x="0.0" y="558" width="600" height="44"/>
@@ -303,47 +315,21 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leading" id="AE6-ba-jHN"/>
+                            <constraint firstAttribute="trailing" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" id="8q0-9M-YXL"/>
                             <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="bFi-hG-dvq" secondAttribute="bottom" id="Bea-tX-ZXg"/>
-                            <constraint firstAttribute="trailing" secondItem="l20-gG-OCl" secondAttribute="trailing" id="IBb-M1-R0f"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="l20-gG-OCl" secondAttribute="bottom" constant="-2" id="M6U-k4-Ncl"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" constant="2" id="UrQ-iB-Tfs"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="trailing" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" id="qcJ-XB-J7C"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="uc7-ZJ-LA2" secondAttribute="leading" id="rQT-hJ-mpQ"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="ObV-tR-skR"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="trailing" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" id="f8s-3I-IZW"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="uc7-ZJ-LA2" secondAttribute="leading" id="omk-5s-Mkc"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leading" id="tmR-nN-mwC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="memeViewImage" destination="uc7-ZJ-LA2" id="RZq-oH-n0Q"/>
-                        <segue destination="pre-DE-GlK" kind="show" identifier="editMemeVC" id="Qp2-6F-Dqh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0T-5S-xnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7487" y="220"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Yg0-oO-Kd7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="pre-DE-GlK" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vI2-Gz-5rA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="E7U-WI-Pc2">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="VF7-pm-DGD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7M1-j7-JTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6285.5" y="214.5"/>
+            <point key="canvasLocation" x="7077" y="220"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Wz-y2-isR">
@@ -411,7 +397,7 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aPO-7X-ElQ"/>
-        <segue reference="Syo-BZ-GEB"/>
+        <segue reference="zcy-Ac-GFE"/>
+        <segue reference="hVh-0b-HgP"/>
     </inferredMetricsTieBreakers>
 </document>
