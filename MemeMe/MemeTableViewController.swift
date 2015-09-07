@@ -9,7 +9,6 @@
 import UIKit
 
 class MemeTableViewController: UITableViewController {
-
     
     var rowSelected: Int?
     var memes: [MemeClass] {
@@ -26,6 +25,7 @@ class MemeTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+        navigationController?.tabBarController?.tabBar.hidden = false
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

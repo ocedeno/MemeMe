@@ -46,7 +46,7 @@ class MemeDetailViewController: UIViewController {
     }
     
     @IBAction func returnToMemeEditor(sender: UIBarButtonItem) {
-        var meme = memes[rowSelected!]
+        let meme = memes[rowSelected!]
         performSegueWithIdentifier("editMemeVC", sender: meme.image)
     }
     

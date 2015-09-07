@@ -12,6 +12,7 @@ class MemeCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
+    var rowSelected: Int?
     var memes: [MemeClass] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
@@ -26,14 +27,14 @@ class MemeCollectionViewController: UICollectionViewController {
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSizeMake(dimensionWidth, dimensionHeight)
-        
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     
         collectionView?.reloadData()
+
+        navigationController?.tabBarController?.tabBar.hidden = false
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -50,7 +51,8 @@ class MemeCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let meme = memes[indexPath.row]
+        rowSelected = indexPath.row
+        let meme = memes[rowSelected!]
         performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
     }
     
@@ -59,6 +61,7 @@ class MemeCollectionViewController: UICollectionViewController {
             let data = sender as! UIImage
             let memeDetailVC = segue.destinationViewController as! MemeDetailViewController
             memeDetailVC.image = data
+            memeDetailVC.rowSelected = rowSelected!
         }
     }
 }
