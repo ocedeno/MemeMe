@@ -13,8 +13,12 @@ class MemeCollectionViewController: UICollectionViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     var rowSelected: Int?
-    var memes: [MemeClass] {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+//    var memes: [MemeClass] {
+//        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+//    }
+    
+    var appDel: AppDelegate {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate)
     }
     
     override func viewDidLoad() {
@@ -38,13 +42,13 @@ class MemeCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return memes.count
+        return appDel.memes.count
         
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CollectionViewCell
-        let meme = memes[indexPath.item]
+        let meme = appDel.memes[indexPath.item]
         cell.setProperties(meme.topText, bottomText: meme.bottomText, backgroundImage: meme.image)
         cell.labelAttributes()
         return cell
@@ -52,7 +56,7 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         rowSelected = indexPath.row
-        let meme = memes[rowSelected!]
+        let meme = appDel.memes[rowSelected!]
         performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
     }
     

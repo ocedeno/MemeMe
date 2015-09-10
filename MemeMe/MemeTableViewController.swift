@@ -11,8 +11,11 @@ import UIKit
 class MemeTableViewController: UITableViewController {
     
     var rowSelected: Int?
-    var memes: [MemeClass] {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+//    var memes: [MemeClass] {
+//        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+//    }
+    var appDel: AppDelegate {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate)
     }
     
     override func viewDidLoad() {
@@ -29,12 +32,12 @@ class MemeTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memes.count
+        return appDel.memes.count
     }
         
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath) as! TableViewCell
-        let meme = memes[indexPath.row]
+        let meme = appDel.memes[indexPath.row]
         
         cell.setTableProperties(meme.topText, bottomText: meme.bottomText, imageViewImage: meme.memedImage)
         
@@ -43,7 +46,7 @@ class MemeTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         rowSelected = indexPath.row
-        let meme = memes[rowSelected!]
+        let meme = appDel.memes[rowSelected!]
         performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
     }
     

@@ -11,10 +11,14 @@ import UIKit
 class MemeDetailViewController: UIViewController {
     
     var rowSelected: Int?
-    var memes: [MemeClass] {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
-    }
+//    var memes: [MemeClass] {
+//        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+//    }
 
+    var appDel: AppDelegate {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate)
+    }
+    
     @IBOutlet weak var memeViewImage: UIImageView!
     
     var image: UIImage!
@@ -46,12 +50,13 @@ class MemeDetailViewController: UIViewController {
     }
     
     @IBAction func returnToMemeEditor(sender: UIBarButtonItem) {
-        let meme = memes[rowSelected!]
+        let meme = appDel.memes[rowSelected!]
         performSegueWithIdentifier("editMemeVC", sender: meme.image)
     }
     
     @IBAction func deleteMeme(sender: UIBarButtonItem) {
-        memes.removeAtIndex(rowSelected!)
+        let meme = appDel.memes[rowSelected!]
+        appDel.memes.removeAtIndex(rowSelected!)
         navigationController?.popToRootViewControllerAnimated(true)
 
     }
