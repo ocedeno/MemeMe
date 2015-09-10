@@ -55,10 +55,19 @@ class MemeDetailViewController: UIViewController {
     }
     
     @IBAction func deleteMeme(sender: UIBarButtonItem) {
-        let meme = appDel.memes[rowSelected!]
-        appDel.memes.removeAtIndex(rowSelected!)
-        navigationController?.popToRootViewControllerAnimated(true)
+        let deleteAlert = UIAlertController(title: "Delete Meme?", message: "Are you sure you want to delete this Meme?", preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: {(action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
+        deleteAlert.addAction(cancelAction)
+        let OkAction = UIAlertAction(title: "Delete", style: .Default, handler: {(action) in
+            let meme = self.appDel.memes[self.rowSelected!]
+            self.appDel.memes.removeAtIndex(self.rowSelected!)
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        })
+        deleteAlert.addAction(OkAction)
 
+        presentViewController(deleteAlert, animated: true, completion: nil)
     }
     
 }
