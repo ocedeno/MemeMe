@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sjt-v5-Sdq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sjt-v5-Sdq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -286,10 +286,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-ZJ-LA2">
-                                <rect key="frame" x="0.0" y="64" width="600" height="494"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="494" id="NwD-9u-Rn4"/>
+                                    <constraint firstAttribute="height" constant="600" id="NwD-9u-Rn4"/>
                                 </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l20-gG-OCl">
@@ -320,12 +320,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="l20-gG-OCl" secondAttribute="trailing" constant="-16" id="ES4-ux-K5C"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="K0O-51-8kV"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" constant="-42" id="K0O-51-8kV"/>
+                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="Yqm-em-8EK" secondAttribute="bottom" constant="7" id="P4r-5Y-xdB"/>
                             <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="Yqm-em-8EK" secondAttribute="bottom" constant="7" id="S4C-cF-grb"/>
                             <constraint firstItem="l20-gG-OCl" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="eNj-f4-W7X"/>
-                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="bFi-hG-dvq" secondAttribute="bottom" id="lyK-6S-A4J"/>
+                            <constraint firstItem="uc7-ZJ-LA2" firstAttribute="top" secondItem="bFi-hG-dvq" secondAttribute="bottom" constant="-64" id="lyK-6S-A4J"/>
                             <constraint firstItem="uc7-ZJ-LA2" firstAttribute="leading" secondItem="iad-nW-jtt" secondAttribute="leadingMargin" constant="-16" id="nMe-u2-NzX"/>
-                            <constraint firstItem="l20-gG-OCl" firstAttribute="top" secondItem="uc7-ZJ-LA2" secondAttribute="bottom" id="rDe-Cv-oGs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uc7-ZJ-LA2" secondAttribute="trailing" constant="-16" id="tPJ-Db-ffW"/>
                             <constraint firstAttribute="bottomMargin" secondItem="l20-gG-OCl" secondAttribute="bottom" constant="-2" id="x2A-0f-aOG"/>
                         </constraints>
@@ -405,7 +405,7 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zcy-Ac-GFE"/>
         <segue reference="hVh-0b-HgP"/>
+        <segue reference="Nz3-lA-y8S"/>
     </inferredMetricsTieBreakers>
 </document>
