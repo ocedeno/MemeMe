@@ -13,10 +13,6 @@ class MemeCollectionViewController: UICollectionViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     var rowSelected: Int?
-//    var memes: [MemeClass] {
-//        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
-//    }
-    
     var appDel: AppDelegate {
         return (UIApplication.sharedApplication().delegate as! AppDelegate)
     }

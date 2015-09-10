@@ -62,6 +62,7 @@
                             </toolbar>
                         </subviews>
                         <animations/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jdM-i6-MSu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1Cn-Tq-Gwn"/>
                             <constraint firstItem="sYM-wJ-FCX" firstAttribute="top" secondItem="jdM-i6-MSu" secondAttribute="bottom" constant="-59" id="56c-YU-SHS"/>
@@ -404,7 +405,7 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zcy-Ac-GFE"/>
         <segue reference="hVh-0b-HgP"/>
-        <segue reference="Nz3-lA-y8S"/>
     </inferredMetricsTieBreakers>
 </document>

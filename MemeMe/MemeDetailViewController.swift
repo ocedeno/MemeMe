@@ -10,17 +10,12 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
+    @IBOutlet weak var memeViewImage: UIImageView!
+    
     var rowSelected: Int?
-//    var memes: [MemeClass] {
-//        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
-//    }
-
     var appDel: AppDelegate {
         return (UIApplication.sharedApplication().delegate as! AppDelegate)
     }
-    
-    @IBOutlet weak var memeViewImage: UIImageView!
-    
     var image: UIImage!
     
     override func viewDidLoad() {

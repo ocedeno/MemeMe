@@ -19,7 +19,4 @@ class TableViewCell: UITableViewCell {
         cellBottomLabel.text = bottomText
         cellImageView.image = imageViewImage
     }
-    
-    
-    
 }

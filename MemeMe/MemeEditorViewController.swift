@@ -16,7 +16,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
 
-    var memeClass: MemeClass?
+    var memeStruct: MemeStruct?
     var memedImage: UIImage?
 
     let memeTextAttributes = [
