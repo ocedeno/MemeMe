@@ -14,7 +14,7 @@ class MemeDetailViewController: UIViewController {
     
     var rowSelected: Int?
     var appDel: AppDelegate {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate)
+        return (UIApplication.shared.delegate as! AppDelegate)
     }
     var image: UIImage!
     
@@ -24,45 +24,45 @@ class MemeDetailViewController: UIViewController {
         memeViewImage.image = image
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-    navigationController?.tabBarController?.tabBar.hidden = true
+    navigationController?.tabBarController?.tabBar.isHidden = true
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-    navigationController?.tabBarController?.tabBar.hidden = false
+    navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "editMemeVC"){
             let data = sender as? UIImage
-            let editMeme = segue.destinationViewController as! MemeEditorViewController
+            let editMeme = segue.destination as! MemeEditorViewController
             editMeme.memedImage = data
         }
     }
     
-    @IBAction func returnToMemeEditor(sender: UIBarButtonItem) {
+    @IBAction func returnToMemeEditor(_ sender: UIBarButtonItem) {
         let meme = appDel.memes[rowSelected!]
-        performSegueWithIdentifier("editMemeVC", sender: meme.image)
+        performSegue(withIdentifier: "editMemeVC", sender: meme.image)
     }
     
-    @IBAction func deleteMeme(sender: UIBarButtonItem) {
-        let deleteAlert = UIAlertController(title: "Delete Meme?", message: "Are you sure you want to delete this Meme?", preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: {(action) in
-            self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func deleteMeme(_ sender: UIBarButtonItem) {
+        let deleteAlert = UIAlertController(title: "Delete Meme?", message: "Are you sure you want to delete this Meme?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {(action) in
+            self.dismiss(animated: true, completion: nil)
         })
         deleteAlert.addAction(cancelAction)
-        let OkAction = UIAlertAction(title: "Delete", style: .Default, handler: {(action) in
+        let OkAction = UIAlertAction(title: "Delete", style: .default, handler: {(action) in
             let meme = self.appDel.memes[self.rowSelected!]
-            self.appDel.memes.removeAtIndex(self.rowSelected!)
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            self.appDel.memes.remove(at: self.rowSelected!)
+            self.navigationController?.popToRootViewController(animated: true)
         })
         deleteAlert.addAction(OkAction)
 
-        presentViewController(deleteAlert, animated: true, completion: nil)
+        present(deleteAlert, animated: true, completion: nil)
     }
     
 }

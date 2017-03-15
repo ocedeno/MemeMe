@@ -14,7 +14,7 @@ class MemeCollectionViewController: UICollectionViewController {
     
     var rowSelected: Int?
     var appDel: AppDelegate {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate)
+        return (UIApplication.shared.delegate as! AppDelegate)
     }
     
     override func viewDidLoad() {
@@ -26,40 +26,40 @@ class MemeCollectionViewController: UICollectionViewController {
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSizeMake(dimensionWidth, dimensionHeight)
+        flowLayout.itemSize = CGSize(width: dimensionWidth, height: dimensionHeight)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
         collectionView?.reloadData()
 
-        navigationController?.tabBarController?.tabBar.hidden = false
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return appDel.memes.count
         
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         let meme = appDel.memes[indexPath.item]
         cell.setProperties(meme.topText, bottomText: meme.bottomText, backgroundImage: meme.image)
         cell.labelAttributes()
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         rowSelected = indexPath.row
         let meme = appDel.memes[rowSelected!]
-        performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
+        performSegue(withIdentifier: "memeDetailView", sender: meme.memedImage)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "memeDetailView") {
             let data = sender as! UIImage
-            let memeDetailVC = segue.destinationViewController as! MemeDetailViewController
+            let memeDetailVC = segue.destination as! MemeDetailViewController
             memeDetailVC.image = data
             memeDetailVC.rowSelected = rowSelected!
         }

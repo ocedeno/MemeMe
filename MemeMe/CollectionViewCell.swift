@@ -14,19 +14,19 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
     
-    func setProperties (topText: String, bottomText: String,backgroundImage: UIImage){
+    func setProperties (_ topText: String, bottomText: String,backgroundImage: UIImage){
         topLabel.text = topText
         bottomLabel.text = bottomText
         collectionImageView.image = backgroundImage
-        collectionImageView.contentMode = .ScaleAspectFill
+        collectionImageView.contentMode = .scaleAspectFill
     }
     
     func labelAttributes(){
         
         topLabel.font = UIFont(name: "Impact", size: 10.0)
-        topLabel.textColor = UIColor.whiteColor()
+        topLabel.textColor = UIColor.white
         bottomLabel.font = UIFont(name: "Impact", size: 10.0)
-        bottomLabel.textColor = UIColor.whiteColor()
+        bottomLabel.textColor = UIColor.white
         
         var topText = topLabel.text!
         var bottomText = bottomLabel.text!

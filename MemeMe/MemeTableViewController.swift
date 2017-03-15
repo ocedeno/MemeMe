@@ -12,28 +12,28 @@ class MemeTableViewController: UITableViewController {
     
     var rowSelected: Int?
     var appDel: AppDelegate {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate)
+        return (UIApplication.shared.delegate as! AppDelegate)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.separatorColor = UIColor.clearColor()
+        tableView.separatorColor = UIColor.clear
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
-        navigationController?.tabBarController?.tabBar.hidden = false
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appDel.memes.count
     }
         
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath) as! TableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         let meme = appDel.memes[indexPath.row]
         
         cell.setTableProperties(meme.topText, bottomText: meme.bottomText, imageViewImage: meme.memedImage)
@@ -41,16 +41,16 @@ class MemeTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         rowSelected = indexPath.row
         let meme = appDel.memes[rowSelected!]
-        performSegueWithIdentifier("memeDetailView", sender: meme.memedImage)
+        performSegue(withIdentifier: "memeDetailView", sender: meme.memedImage)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "memeDetailView") {
             let data = sender as! UIImage
-            let memeDetailVC = segue.destinationViewController as! MemeDetailViewController
+            let memeDetailVC = segue.destination as! MemeDetailViewController
             memeDetailVC.image = data
             memeDetailVC.rowSelected = rowSelected!
         }

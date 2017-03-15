@@ -14,7 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var cellTopLabel: UILabel!
     @IBOutlet weak var cellBottomLabel: UILabel!
     
-    func setTableProperties(topText: String,bottomText: String, imageViewImage: UIImage){
+    func setTableProperties(_ topText: String,bottomText: String, imageViewImage: UIImage){
         cellTopLabel.text = topText
         cellBottomLabel.text = bottomText
         cellImageView.image = imageViewImage
